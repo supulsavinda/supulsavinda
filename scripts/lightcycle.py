@@ -21,7 +21,12 @@ X0, Y0 = 12, 12                 # grid origin inside the image
 SPEED = 260                     # px per second
 TRAIL = 230                     # length of the light trail, px
 # Square colours: empty, then four levels from dim to full accent.
-LEVELS = ['#161512', '#4a3a0c', '#8a6a00', '#cc9800', ACCENT]
+def _mix(a, b, t):
+    a, b = [int(a[i:i + 2], 16) for i in (1, 3, 5)], [int(b[i:i + 2], 16) for i in (1, 3, 5)]
+    return '#' + ''.join(f'{round(x + (y - x) * t):02x}' for x, y in zip(a, b))
+
+
+LEVELS = ['#161512'] + [_mix('#161512', ACCENT, t) for t in (.3, .55, .8, 1)]
 
 
 def fetch(login):

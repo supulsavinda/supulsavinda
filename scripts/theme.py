@@ -22,8 +22,8 @@ BG = '#0b0b0a'          # panel surface
 LINE = '#1f1e1a'        # dim grid lines and tracks
 LINE_STRONG = '#36332b'
 
-ACCENT = '#FFBF00'      # the one accent: Tron: Legacy amber-yellow (change this one line to recolour everything)
-ORANGE = '#FFBF00'      # second light (kept the same gold, for a single-accent look)
+ACCENT = '#F5D41E'      # the one accent: Tron: Legacy yellow (sampled from the film) (change this one line to recolour everything)
+ORANGE = '#F5D41E'      # second light (kept the same gold, for a single-accent look)
 
 TEXT = '#f2efe8'
 TEXT_SOFT = '#a39e93'
